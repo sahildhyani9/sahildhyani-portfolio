@@ -188,6 +188,49 @@ h6 {
   line-height: 0px;
 }
 
+/* Header download button styling */
+.header .btn-get-started,
+.header .btn-download {
+  color: #ffffff !important;
+  background: var(--accent-color);
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; /* ✅ horizontal centering */
+
+  padding: 12px 32px;      /* vertical + horizontal centering */
+  border-radius: 50px;
+
+  border: none;
+  box-shadow: 0 8px 20px rgba(52,183,167,0.20);
+  transition: all 0.28s ease;
+  margin-right: 10px;
+  white-space: nowrap;
+  text-align: center;     /* ✅ fallback */
+}
+
+/* Ensure the inner label is exactly centered inside the fixed-height button */
+.header .btn-get-started .btn-label,
+.header .btn-download .btn-label {
+  position: relative;
+  top: 1px;
+  left: 10px;
+}
+
+.header .btn-get-started:hover,
+.header .btn-download:hover,
+.header .btn-get-started:focus,
+.header .btn-download:focus {
+  background: color-mix(in srgb, var(--accent-color), black 8%);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(52,183,167,0.22);
+  text-decoration: none;
+}
+
 @media (max-width: 1200px) {
   .header .logo {
     order: 1;
